@@ -1,86 +1,148 @@
 *{
     margin:0;
     padding:0;
+    font-family: 'Overpass', sans-serif;
 }
 .main{
     display:flex;
     margin:0;
     border:0;
-    background-color: #393D3F;
-    height: 100vh;
+    background-color: #989795;
+    min-height: 100vh;
     width: 100vw;
     flex-direction: column;
     justify-content:center;
     align-items: center;
 
 }
-.header{
-    display:flex;
-    position: fixed;
-    top:0;
-    height: 70px;
-    width:100%;
-    background-color: #F9C80E;
-    justify-content:center;
-    align-items: center;
+.header.hidden {
+    transform: translateY(-100%);
 }
-.header-logo{
-    display:flex;
-    height:50px;
-    width:auto;
-    position: fixed;
-    left: 40px;
-    align-items: center;
-}
-.header-navigation{
-    display:flex;
-    align-items:center;
-    width: 60%;
-    height:100%;
-    justify-content: flex-end;
-}
-.header-a {
-    box-shadow: inset 0 0 0 0 #393D3F;
-    color: #F9C80E;
-    padding: 0 .25rem;
-    margin: 0 -.25rem;
-    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-}
-.header-a:hover {
-    color: #F9C80E;
-    box-shadow: inset 200px 0 0 0 #393D3F;
-}
-.header-button{
-    display:flex;
-    text-decoration:none;
-    color: #393D3F;
-    font-size: 20px;
-    width:150px;
-    height:45px;
-    justify-content:center;
-    align-items: center;
-}
-.cart {
+
+.header {
     display: flex;
-    height: 40px;
-    width: 40px;
-    align-items: center;
     position: fixed;
-    right: 30px;
-    top: 15px;
-    transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
+    top: 0;
+    width: 100%;
+    background-color: #dbc771;
+    justify-content: space-between;
+    align-items: center;
+    /*padding: 15px 30px;*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.header-logo img {
+    height: 100px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.header-logo img:hover {
+    transform: scale(1.1);
+}
+
+.header-navigation {
+    display: flex;
+    align-items: center;
+}
+
+.header-button {
+    text-decoration: none;
+    color: #393D3F;
+    font-size: 18px;
+    margin: 0 15px;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+}
+
+.header-button:hover {
+    color: #fff;
+}
+
+.cart {
+    height: 35px;
+    width: 35px;
+    margin-right:15px;
+    display:flex;
+    transition: transform 0.3s ease-in-out;
 }
 
 .cart:hover {
-    transform: scale(1.125);
+    transform: scale(1.1);
 }
-.bee-board{
+.landing-container{
     display:flex;
-    width:90%;
-    padding:35px;
+    flex-direction: column;
+    height:100vh;
+    width:100vw;
+}
+.bee-board-cont{
+    display:flex;
+    height: 100vh;
+    width:100vw;
+    justify-content: center;
+    align-items:center;
+    background: linear-gradient(90deg, hsla(186, 90%, 67%, 1) 0%, hsla(171, 100%, 88%, 1) 100%);
+}
+.bee-board-cont-orange{
+    display:flex;
+    height: 100vh;
+    width:100vw;
+    justify-content: center;
+    align-items:center;
+    background: linear-gradient(
+            to right,
+            #ffbd59 0%,
+            #ffbd59 50%,
+            #ed8e20 50%,
+            #ed8e20 100%
+    );
+}
+.video{
+    display:flex;
+    background-color: rgb(128, 128, 128);
+    height:300px;
+    width:400px;
+    justify-content: center;
+    align-items: center;
+}
+.bee-board {
+    display: flex;
+    width: 100%;
     height: 600px;
+    margin-top: 10px;
     background-color: #F9C80E;
-    border-radius: 10px 60px 30px;
+    border-radius: 4px;
+    justify-content: center;
+    background-image: url("https://yxewoodselect.ca/cdn/shop/products/WhiteAsh.jpg?v=1649703653");
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* Ensure the animation stays within the bounds */
+    box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0 -12px 30px, rgba(0, 0, 0, 0.12) 0 4px 6px, rgba(0, 0, 0, 0.17) 0 12px 13px, rgba(0, 0, 0, 0.09) 0 -3px 5px;
+}
+
+.ios-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-radius: 4px;
+}
+.ios-animation-s {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    border-radius: 4px; /* Match the border-radius of .new-item-bg */
 }
 .bee-board-desc{
     display:flex;
@@ -99,58 +161,342 @@
     display:flex;
     font-size:25px;
 }
-.bee-board-recommended{
+.recommended-cont{
     display:flex;
-    width:35%;
-    height:100%;
     flex-direction:column;
-    justify-content:space-evenly;
+    margin-top:50px;
+}
+.about-beebrand-cont{
+    display:flex;
+    width:100%;
+    height:20%;
+    align-items:flex-end;
+    justify-content:flex-start;
+}
+.recommended-p-cont{
+    width:36%;
+    height:100%;
+    display:flex;
+    justify-content: center;
     align-items:center;
+    flex-direction:column;
+}
+.recommended-p-p-cont{
+    display:flex;
+    width:100%;
+    height:50%;
+    align-items:center;
+    justify-content:center;
+}
+.recommended-p{
+    display:flex;
+    width:100%;
+    margin-right:50px;
+    flex-wrap: wrap;
+    font-size:18px;
+}
+.recommended-h-cont{
+    display:flex;
+    width:100%;
+    height:30%;
+    align-items:flex-start;
+    justify-content:flex-start;
+}
+.recommended-h{
+    display:flex;
+    width:50%;
+    margin-top:100px;
+    flex-wrap: wrap;
+    font-size:53px;
+}
+.recommended-buy{
+    display:flex;
+    width:36%;
+    height:100%;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+}
+.recommended-buy-p-cont{
+    display:flex;
+    height:70%;
+    width:100%;
+    align-items:center;
+    justify-content:flex-end;
+    flex-direction:column;
+}
+.recommended-buy-button-cont{
+    display:flex;
+    height:30%;
+    width:100%;
+}
+.logo{
+    display:flex;
+    height:130px;
+    margin-right:30px;
+}
+.beeboard-p{
+    display:flex;
+    width:100%;
+    text-align:center;
+    justify-content:center;
+    align-items:center;
+    margin-top:30px;
+    flex-wrap: wrap;
+    font-size:18px;
 }
 .popular-image{
     display:flex;
-    height:350px;
-}
-.popular-card{
-    display:flex;
-    width:100%;
     height:100%;
-    justify-content:space-evenly;
-    align-items:center;
-    flex-direction:column;
 }
 .popular-p{
     display:flex;
     font-size:25px;
     height:50px;
+    margin-top:40px;
+    margin-bottom:30px;
     align-items:center;
-    justify-content:center
+    justify-content:center;
+}
+.beeboard-about{
+    font-size:18px;
+    width:100%;
+    height:100%;
+    justify-content:center;
+    align-items:center;
 }
 .popular-options{
     display:flex;
     justify-content:space-evenly;
     align-items:center;
     width:100%;
+    height:100%;
 }
-.popular-cart{
+.popular-cart {
+    display: flex;
+    border-radius: 5px; /* Rounded corners for a modern look */
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 45px;
+    background-color: #ffffff; /* White background for contrast */
+    border: none; /* Remove border for a cleaner look */
+    color: #007BFF; /* Blue text color */
+    font-weight: bold; /* Bold text for emphasis */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+.popular-cart-orange{
     display:flex;
+    border-radius: 2px;
     text-decoration:none;
     justify-content:center;
     align-items:center;
     width:150px;
     height:35px;
-    background-color: #393D3F;
-    border: 3px solid #393D3F;
-    color: #F9C80E;
+    background-color: #ffbd59;
+    border: 3px solid #ffbd59;
+    color: #ffbd59;
+    transition: transform 0.3s ease-in-out;
+}
+.popular-cart:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
 .popular-details {
     display: flex;
+    border-radius: 5px; /* Rounded corners for a modern look */
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 45px;
+    background-color: #007BFF; /* Blue background */
+    border: none; /* Remove border for a cleaner look */
+    color: #ffffff; /* White text color */
+    font-weight: bold; /* Bold text for emphasis */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+.popular-details-orange {
+    display: flex;
+    border-radius: 2px;
     text-decoration: none;
     justify-content: center;
     align-items: center;
     width: 150px;
     height: 35px;
-    background-color: #F9C80E;
-    border: 3px solid #393D3F;
-    color: #393D3F;
+    background-color: #ffbd59;
+    border: 3px solid #ffbd59;
+    color: #ed8e20;
+    transition: transform 0.3s ease-in-out;
+}
+.popular-details:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+.about-beebrand{
+    display:flex;
+    margin-top:-50px;
+    margin-left:-15px;
+}
+.new-products-cont{
+    display:flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content:center;
+    align-items:center;
+}
+.new-products{
+    display:flex;
+    height:400px;
+    width: 100%;
+    background-color: linen;
+    justify-content: space-evenly;
+    align-items:center;
+    flex-direction: column;
+}
+.new-products-h{
+    display:flex;
+    font-size: 45px;
+    font-weight:bold;
+}
+.features{
+    height:100vh;
+    width:100vw;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+    background-color: #393D3F;
+}
+/* Container for the entire section */
+.new-items {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: flex-start;*/
+    align-items: center;
+    /*border-radius: 4px;*/
+    /*padding: 10px;*/
+    /*box-sizing: border-box;*/
+}
+
+.new-items-p {
+    width: 100%;
+    margin-bottom: 10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.new-item {
+    display: flex;
+    /*flex-wrap: wrap;*/
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /*height: calc(100% - 40px);*/
+}
+
+.new-item-cont {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 48%;
+    width: calc(100% / 5 - 20px);
+    justify-content: space-between;
+    align-items: center;
+    background-color: #484b4c;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.new-item-cont:hover {
+    transform: scale(1.075);
+}
+
+.new-item-bg {
+    height: 550px; /* Ensure the background covers the full height */
+    width: 100%;
+    background-size: cover; /* Scale the background image to cover the entire element */
+    background-position: center; /* Center the background image */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position:relative;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.new-item-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.new-item-text {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+}
+.carousel {
+    /*position: relative;*/
+    width: 100%;
+    /*overflow: hidden;*/
+}
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.carousel-item {
+    width: 20%;
+    height: 600px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: transform 0.5s ease;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0 -12px 30px, rgba(0, 0, 0, 0.12) 0 4px 6px, rgba(0, 0, 0, 0.17) 0 12px 13px, rgba(0, 0, 0, 0.09) 0 -3px 5px;
+}
+.carousel-item:hover .new-item-img {
+    opacity: 0;
+}
+
+.carousel-item:hover .new-item-bg {
+    background-image: url("./Images/Photos/BeeBoard-back.png");
+    opacity: 1;
+}
+.carousel-item.active {
+    display: flex;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
 }
