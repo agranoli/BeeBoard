@@ -9,122 +9,97 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>BeeBoard</title>
+    <title>BeeBrand</title>
 </head>
 <body>
 <div class="main">
     <header class="header" id="header">
         <div class="header-logo">
-            <a href="#"><img src="./Images/Photos/BeeBrandLogo.png" alt="BeeBrand Logo" class="logo"></a>
+            <a href="index.html"><img src="./Images/Photos/BeeBrandLogo.png" alt="BeeBrand Logo" class="logo"></a>
         </div>
         <nav class="header-navigation">
-            <a href="#" class="header-button">Sākums</a>
-            <a href="#" class="header-button">BeeBoard</a>
-            <a href="#" class="header-button">Katalogs</a>
-            <a href="#" class="header-button">Kontakti</a>
+            <a href="index.html" class="header-button">Sākums</a>
+            <a href="Catalogue.html" class="header-button">Katalogs</a>
+            <a href="Contacts.html" class="header-button">Kontakti</a>
         </nav>
-        <a href="#"><img src="./Images/SVG/Cart.SVG" alt="Cart" class="cart"></a>
+        <a href="cart.html"><img src="./Images/SVG/Cart.SVG" alt="Cart" class="cart"></a>
     </header>
 <!--    <div class="landing-container">-->
 
 <!--    </div>-->
-    <div class="bee-board-cont">
-        <div class="recommended-p-cont">
-            <div class="about-beebrand-cont">
-                <p class="about-beebrand">PAR BEEBRAND</p>
-            </div>
-            <div class="recommended-h-cont">
-                <p class="recommended-h">Elza</p>
-            </div>
-            <div class="recommended-p-p-cont">
-                <p class="recommended-p">Kad jūties emocionāli pārņemts vai sasprindzis, Elza ar savām ledus spējām palīdz "atvēsināt" emocijas, ļaujot tev rast mieru un koncentrēties uz risinājumu. Viņa dod spēku saglabāt vēsu prātu un skaidri saskatīt, kā rīkoties pat sarežģītās situācijās.</p>
-            </div>
-        </div>
-        <div class="recommended-cont">
-            <div class="bee-board">
-                <div class="ios-animation"></div>
-                <img src="./Images/Photos/elsa2.png" alt="Mickey mouse" class="popular-image">
-            </div>
-            <div class="beeboard-about">
-                <p class="beeboard-p">BeeBoard apraksts</p>
-            </div>
-        </div>
-        <div class="recommended-buy">
-            <div class="recommended-buy-p-cont">
-                <div class="video">
-                    VIDEO
+    <div class="recommended-bee-board-cont-elsa">
+        <div class="bee-board-cont">
+            <div class="recommended-p-cont">
+                <div class="recommended-h-cont">
+                    <p class="recommended-h-popular">Elza</p>
                 </div>
-                <p class="popular-p">Populārārakais BeeBoard Šomēness</p>
+                <div class="recommended-p-p-cont">
+                    <p class="recommended-p">Kad jūties emocionāli pārņemts vai sasprindzis, Elza ar savām ledus spējām palīdz "atvēsināt" emocijas, ļaujot tev rast mieru un koncentrēties uz risinājumu. Viņa dod spēku saglabāt vēsu prātu un skaidri saskatīt, kā rīkoties pat sarežģītās situācijās.</p>
+                </div>
             </div>
-            <div class="recommended-buy-button-cont">
-                <div class="popular-options">
-                    <a href="#" class="popular-cart">Pievienot grozam</a>
-                    <a href="#" class="popular-details">Skatīt</a>
+            <div class="recommended-cont">
+                <div class="bee-board">
+                    <div class="ios-animation"></div>
+                    <img src="./Images/Photos/elsa.jpg" alt="Elza" class="popular-image">
+                </div>
+            </div>
+            <div class="recommended-buy">
+                <div class="recommended-buy-p-cont">
+                    <div class="video">
+                        video
+                    </div>
+                    <p class="popular-p">Populārārakais BeeBoard Šomēness</p>
+                </div>
+                <div class="recommended-buy-button-cont">
+                    <div class="popular-options">
+                        <a href="#" class="popular-cart">Pievienot grozam</a>
+                        <a href="Item-details.html?id=1" class="popular-details">Skatīt</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="new-items">
         <div class="new-items-p">
-            <p class="recommended-h">Jaunākie tēli</p>
+            <p class="recommended-h">Katalogs</p>
         </div>
         <div class="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item" onClick="openDetails(1)">
-                    <div class="new-item-bg">
-                        <div class="ios-animation-s"></div>
-                        <img class="new-item-img" src="./Images/Photos/elsa2.png" alt="Elsa">
+                <div class="carousel-item-elsa" onClick="openDetails(1)">
+                    <div class="new-item-bg-elsa">
+                        <img class="new-item-img-elsa" src="./Images/Photos/elsa.jpg" alt="Elsa">
                     </div>
-                    <div class="new-item-text">Elza</div>
+                    <div class="new-item-text-elsa">Elza</div>
                 </div>
-                <div class="carousel-item">
-                    <div class="new-item-bg">
-                        <div class="ios-animation-s"></div>
-                        <img class="new-item-img" src="./Images/Photos/Potter.png" alt="Image">
+                <div class="carousel-item-potter" onClick="openDetails(2)">
+                    <div class="new-item-bg-potter">
+                        <img class="new-item-img-potter" src="./Images/Photos/harry-potter.jpg" alt="Harry Potter">
                     </div>
-                    <div class="new-item-text">Harijs Poters</div>
+                    <div class="new-item-text-potter">Harijs Poters</div>
                 </div>
-                <div class="carousel-item">
-                    <div class="new-item-bg">
-                        <div class="ios-animation-s"></div>
-                        <img class="new-item-img" src="./Images/Photos/Stitch.png" alt="Image">
+                <div class="carousel-item-stitch" onClick="openDetails(3)">
+                    <div class="new-item-bg-stitch">
+                        <img class="new-item-img-stitch" src="./Images/Photos/stitch.jpg" alt="Stitch">
                     </div>
-                    <div class="new-item-text">Stičs</div>
+                    <div class="new-item-text-stitch">Stičs</div>
                 </div>
-                <div class="carousel-item">
-                    <div class="new-item-bg">
-                        <div class="ios-animation-s"></div>
-                        <img class="new-item-img" src="./Images/Photos/Joy.png" alt="Image">
+                <div class="carousel-item-joy" onClick="openDetails(4)">
+                    <div class="new-item-bg-joy">
+                        <img class="new-item-img-joy" src="./Images/Photos/joy.jpg" alt="Joy">
                     </div>
-                    <div class="new-item-text">Laime</div>
+                    <div class="new-item-text-joy">Laime</div>
                 </div>
-            <button class="carousel-control prev" onclick="moveCarousel(-1)">&#10094;</button>
-            <button class="carousel-control next" onclick="moveCarousel(1)">&#10095;</button>
+            </div>
         </div>
     </div>
 </div>
-<script src="animation.js"></script>
-<script src="scroll-header.js"></script>
+<script src="Scripts/animation.js"></script>
+<script src="Scripts/scroll-header.js"></script>
 <script>
     function openDetails(itemId) {
         window.location.href = `item-details.html?id=${itemId}`;
     }
 </script>
-<script>
-    let currentIndex = 0;
-
-    function moveCarousel(direction) {
-        const items = document.querySelectorAll('.carousel-item');
-        const totalItems = items.length;
-        items[currentIndex].classList.remove('active');
-        currentIndex = (currentIndex + direction + totalItems) % totalItems;
-        items[currentIndex].classList.add('active');
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('.carousel-item')[currentIndex].classList.add('active');
-    });
-</script>
-<script src="multi-animation.js"></script>
+<script src="Scripts/multi-animation.js"></script>
 </body>
 </html>

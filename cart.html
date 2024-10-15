@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="cart.css">
+    <title>Iepirkuma grozs</title>
+</head>
+<body>
+<div class="container">
+    <h1>Mans iepirkuma grozs</h1>
+    <div class="cart-container">
+        <table>
+            <thead>
+            <tr>
+                <th>PRECE</th>
+                <th>CENA</th>
+                <th>DAUDZUMS</th>
+                <th>KOPSUMMA</th>
+                <th>NOŅEMT</th>
+            </tr>
+            </thead>
+            <tbody id="cart-items">
+            </tbody>
+        </table>
+        <div class="summary">
+            <h2>KOPSAVILKUMS</h2>
+            <div class="summary-item">
+                <span>PREČU SUMMA*</span>
+                <span id="subtotal">0€</span>
+            </div>
+            <div class="summary-item">
+                <span>PIEGĀDE</span>
+                <span>24€</span>
+            </div>
+            <div class="summary-item total">
+                <span>CENA KOPĀ</span>
+                <span id="total-price">0€</span>
+            </div>
+            <button class="checkout-btn" onclick="proceedToPayment()">MAKSĀT</button>
+        </div>
+    </div>
+</div>
+<script src="Scripts/cart.js"></script>
+</body>
+</html>

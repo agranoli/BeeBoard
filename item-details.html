@@ -3,41 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Item Details</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to your styles -->
+    <title>BeeBoard</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="bee-board-cont-orange">
-    <!-- Item Name and Description Section -->
-    <div class="recommended-p-cont">
-        <div class="recommended-h-cont">
-            <p class="recommended-h">TĒLA NOSAUKUMS</p> <!-- Dynamic item name -->
-        </div>
-        <div class="recommended-p-p-cont">
-            <p class="recommended-p">TĒLA APRAKSTS</p> <!-- Dynamic item description -->
-        </div>
+<header class="header" id="header">
+    <div class="header-logo">
+        <a href="index.html"><img src="./Images/Photos/BeeBrandLogo.png" alt="BeeBrand Logo" class="logo"></a>
     </div>
-
-    <!-- Image Section -->
-    <div class="recommended-cont">
-        <div class="bee-board">
-            <div class="ios-animation"></div>
-            <img src="./Images/Photos/elsa.png" alt="Tēls" class="popular-image"> <!-- Dynamic image source -->
+    <nav class="header-navigation">
+        <a href="index.html" class="header-button">Sākums</a>
+        <a href="Catalogue.html" class="header-button">Katalogs</a>
+        <a href="Contacts.html" class="header-button">Kontakti</a>
+    </nav>
+    <a href="cart.html"><img src="./Images/SVG/Cart.SVG" alt="Cart" class="cart"></a>
+</header>
+<div class="recommended-bee-board-cont recommended-bee-board-cont-elsa">
+    <div class="bee-board-cont">
+        <div class="product-image-container">
+            <img src="./Images/Photos/elsa.png" alt="Elza" class="product-image">
+            <div class="product-image-hover"></div>
         </div>
-    </div>
-
-    <!-- Action Buttons -->
-    <div class="recommended-buy">
-        <div class="recommended-buy-button-cont">
-            <div class="popular-options">
-                <a href="#" class="popular-cart">Pievienot grozam</a>
-                <a href="#" class="popular-details">Skatīt</a>
+        <div class="product-details">
+            <h1 class="product-title">Elza</h1>
+            <p class="product-description">
+                Kad jūties emocionāli pārņemts vai sasprindzis, Elza ar savām ledus spējām palīdz "atvēsināt" emocijas, ļaujot tev rast mieru un koncentrēties uz risinājumu. Viņa dod spēku saglabāt vēsu prātu un skaidri saskatīt, kā rīkoties pat sarežģītās situācijās.
+            </p>
+            <div class="product-price">29.99€</div>
+            <div class="product-buttons">
+                <button class="btn btn-wishlist">Add to Wishlist</button>
+                <button class="btn btn-cart" onclick="addToCart('Elza', 29.99, './Images/Photos/elsa.jpg')">Pievienot grozam</button>
             </div>
         </div>
     </div>
 </div>
-
-<!-- Link to the external JavaScript file -->
-<script src="item-details.js"></script>
+<script src="Scripts/scroll-header.js"></script>
+<script src="Scripts/item-details.js"></script>
+<script src="Scripts/cart.js"></script>
 </body>
 </html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paysera Settings</title>
+</head>
+<body>
+<h1>Paysera Integration Settings</h1>
+<form action="save_settings.php" method="post">
+    <label>
+        Enable Paysera Integration:
+        <input type="checkbox" name="enable_integration">
+    </label><br>
+
+    <label>
+        Project ID:
+        <input type="text" name="project_id" pattern="\d*">
+    </label><br>
+
+    <label>
+        Project Sign:
+        <input type="text" name="project_sign">
+    </label><br>
+
+    <label>
+        Test Mode:
+        <input type="checkbox" name="test_mode">
+    </label><br>
+
+    <label>
+        Payment Method Title:
+        <input type="text" name="payment_title">
+    </label><br>
+
+    <label>
+        Payment Method Description:
+        <textarea name="payment_description"></textarea>
+    </label><br>
+
+    <label>
+        Redirect Option:
+        <input type="radio" name="redirect_option" value="paysera"> Paysera
+        <input type="radio" name="redirect_option" value="website"> Website
+    </label><br>
+
+    <label>
+        Select Countries:
+        <select name="countries[]" multiple>
+            <option value="LV">Latvia</option>
+            <option value="LT">Lithuania</option>
+            <option value="EE">Estonia</option>
+            <!-- Add more countries as needed -->
+        </select>
+    </label><br>
+
+    <label>
+        Display Method:
+        <input type="radio" name="display_method" value="list"> List
+        <input type="radio" name="display_method" value="grid"> Grid
+    </label><br>
+
+    <input type="submit" value="Save Settings">
+</form>
+</body>
+</html>
