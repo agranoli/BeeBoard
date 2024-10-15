@@ -10,6 +10,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <title>BeeBrand</title>
+    <!-- Preload critical images -->
+    <link rel="preload" href="./Images/Photos/elsa.webp" as="image">
 </head>
 <body>
 <div class="main">
@@ -24,9 +26,6 @@
         </nav>
         <a href="cart.html"><img src="./Images/SVG/Cart.SVG" alt="Cart" class="cart"></a>
     </header>
-<!--    <div class="landing-container">-->
-
-<!--    </div>-->
     <div class="recommended-bee-board-cont-elsa">
         <div class="bee-board-cont">
             <div class="recommended-p-cont">
@@ -40,7 +39,7 @@
             <div class="recommended-cont">
                 <div class="bee-board">
                     <div class="ios-animation"></div>
-                    <img src="./Images/Photos/elsa.jpg" alt="Elza" class="popular-image">
+                    <img src="./Images/Photos/elsa.webp" alt="Elza" class="popular-image" loading="lazy">
                 </div>
             </div>
             <div class="recommended-buy">
@@ -53,45 +52,13 @@
                 <div class="recommended-buy-button-cont">
                     <div class="popular-options">
                         <a href="#" class="popular-cart">Pievienot grozam</a>
-                        <a href="Item-details.html?id=1" class="popular-details">Skatīt</a>
+                        <a href="item-details.html?id=1" class="popular-details">Skatīt</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="new-items">
-        <div class="new-items-p">
-            <p class="recommended-h">Jaunākie tēli</p>
-        </div>
-        <div class="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item-elsa" onClick="openDetails(1)">
-                    <div class="new-item-bg-elsa">
-                        <img class="new-item-img-elsa" src="./Images/Photos/elsa.jpg" alt="Elsa">
-                    </div>
-                    <div class="new-item-text-elsa">Elza</div>
-                </div>
-                <div class="carousel-item-potter" onClick="openDetails(2)">
-                    <div class="new-item-bg-potter">
-                        <img class="new-item-img-potter" src="./Images/Photos/harry-potter.jpg" alt="Harry Potter">
-                    </div>
-                    <div class="new-item-text-potter">Harijs Poters</div>
-                </div>
-                <div class="carousel-item-stitch" onClick="openDetails(3)">
-                    <div class="new-item-bg-stitch">
-                        <img class="new-item-img-stitch" src="./Images/Photos/stitch.jpg" alt="Stitch">
-                    </div>
-                    <div class="new-item-text-stitch">Stičs</div>
-                </div>
-                <div class="carousel-item-joy" onClick="openDetails(4)">
-                    <div class="new-item-bg-joy">
-                        <img class="new-item-img-joy" src="./Images/Photos/joy.jpg" alt="Joy">
-                    </div>
-                    <div class="new-item-text-joy">Laime</div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- Other content -->
 </div>
 <script src="Scripts/animation.js"></script>
 <script src="Scripts/scroll-header.js"></script>
