@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="User.css">
+    <title>Lietotāja pieslēgšanās</title>
+</head>
+<body>
+<div class="container">
+    <header class="header" id="header">
+        <div class="header-logo">
+            <a href="../index.html"><img src="../Images/Photos/BeeBrandLogo.png" alt="BeeBrand Logo" class="logo"></a>
+        </div>
+        <nav class="header-navigation">
+            <a href="../index.html" class="header-button">Sākums</a>
+            <a href="../Catalogue.html" class="header-button">Katalogs</a>
+            <a href="../Contacts.html" class="header-button">Kontakti</a>
+        </nav>
+        <div class="header-end-nav">
+            <a href="../Profile/CreateUser.html"><img src="../Images/SVG/User.SVG" alt="User" class="cart"></a>
+            <a href="../Cart/cart.html"><img src="/./Images/SVG/Cart.SVG" alt="Cart" class="cart"></a>
+        </div>
+    </header>
+    <div class="form-container">
+        <div class="form-slider">
+            <div class="form" id="login-form">
+                <h2>Pieslēgties</h2>
+                <form>
+                    <div class="input-group">
+                        <label for="login-email">E-pasts</label>
+                        <input type="email" id="login-email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="login-password">Parole</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <button type="submit">Pieslēgties</button>
+                </form>
+                <p class="toggle-form">
+                    Jums vēl nav izveidots konts? <a href="#" id="show-register">Reģistrēties</a>
+                </p>
+            </div>
+            <div class="form" id="register-form">
+                <h2>Reģistrēties</h2>
+                <form>
+                    <div class="input-group">
+                        <label for="register-email">Vārds un Uzvārds</label>
+                        <input type="email" id="register-name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="register-email">E-pasts</label>
+                        <input type="email" id="register-email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="register-password">Parole</label>
+                        <input type="password" id="register-password" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="confirm-password">Apstiprināt paroli</label>
+                        <input type="password" id="confirm-password" required>
+                    </div>
+                    <button type="submit">Reģistrēties</button>
+                </form>
+                <p class="toggle-form">
+                    Jums jau ir izzveidots konts? <a href="#" id="show-login">Pieslēgties</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="UserAnimation.js"></script>
+</body>
+</html>

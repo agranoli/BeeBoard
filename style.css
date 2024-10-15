@@ -87,7 +87,12 @@ body {
 .cart:hover {
     transform: scale(1.1);
 }
-
+.header-end-nav{
+    display:flex;
+    width:130px;
+    justify-content: space-between;
+    align-items:center;
+}
 .landing-container {
     display: flex;
     flex-direction: column;
