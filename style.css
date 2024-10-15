@@ -536,25 +536,25 @@ body {
 }
 
 .new-item-bg-elsa {
-    background-image: url("./Images/Photos/elsa.jpg");
+    background-image: url("./Images/Photos/elsa.webp");
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
 .new-item-bg-potter {
-    background-image: url("./Images/Photos/harry-potter.jpg");
+    background-image: url("./Images/Photos/harry-potter.webp");
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
 .new-item-bg-stitch {
-    background-image: url("./Images/Photos/stitch.jpg");
+    background-image: url("./Images/Photos/stitch.webp");
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
 .new-item-bg-joy {
-    background-image: url("./Images/Photos/joy.jpg");
+    background-image: url("./Images/Photos/joy.webp");
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -563,7 +563,7 @@ body {
 .new-item-bg-potter:hover,
 .new-item-bg-stitch:hover,
 .new-item-bg-joy:hover {
-    background-image: url("./Images/Photos/BeeBoard.jpg");
+    background-image: url("./Images/Photos/BeeBoard.webp");
     opacity: 1; /* Optional: Adjust opacity on hover */
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -741,7 +741,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('./Images/Photos/BeeBoard.png');
+    background-image: url('./Images/Photos/BeeBoard.webp');
     background-size: cover;
     background-position: center;
     opacity: 0;
