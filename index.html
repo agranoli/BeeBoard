@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="style.css">
     <title>BeeBrand</title>
     <!-- Preload critical images -->
-    <link rel="preload" href="./Images/Photos/elsa.webp" as="image">
+    <link rel="preload" href="/Images/Photos/elsa.webp" as="image">
 </head>
 <body>
 <div class="main">
@@ -42,7 +42,7 @@
             <div class="recommended-cont">
                 <div class="bee-board">
                     <div class="ios-animation"></div>
-                    <img src="./Images/Photos/elsa.webp" alt="Elza" class="popular-image" loading="lazy">
+                    <img src="/Images/Photos/elsa.webp" alt="Elza" class="popular-image" loading="lazy">
                 </div>
             </div>
             <div class="recommended-buy">
@@ -54,22 +54,55 @@
                 </div>
                 <div class="recommended-buy-button-cont">
                     <div class="popular-options">
-                        <a href="#" class="popular-cart">Pievienot grozam</a>
+                        <a href="#" class="popular-cart" onclick="addToCart('Elza', 29.99, './Images/Photos/elsa.webp')">Pievienot grozam</a>
                         <a href="Items/item-details.html?id=1" class="popular-details">Skatīt</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Other content -->
+    <div class="new-items">
+        <div class="new-items-p">
+            <p class="recommended-h">Jaunākie tēli</p>
+        </div>
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item-elsa" onClick="openDetails(1)">
+                    <div class="new-item-bg-elsa">
+                        <div class="ios-animation-s"></div>
+                    </div>
+                    <div class="new-item-text-elsa">Elza</div>
+                </div>
+                <div class="carousel-item-potter" onClick="openDetails(2)">
+                    <div class="new-item-bg-potter">
+                        <div class="ios-animation-s"></div>
+                    </div>
+                    <div class="new-item-text-potter">Harijs Poters</div>
+                </div>
+                <div class="carousel-item-stitch" onClick="openDetails(3)">
+                    <div class="new-item-bg-stitch">
+                        <div class="ios-animation-s"></div>
+                    </div>
+                    <div class="new-item-text-stitch">Stičs</div>
+                </div>
+                <div class="carousel-item-joy" onClick="openDetails(4)">
+                    <div class="new-item-bg-joy">
+                        <div class="ios-animation-s"></div>
+                    </div>
+                    <div class="new-item-text-joy">Laime</div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<script src="Scripts/animation.js"></script>
-<script src="Scripts/scroll-header.js"></script>
+<script src="./Scripts/animation.js"></script>
+<script src="./Scripts/scroll-header.js"></script>
 <script>
     function openDetails(itemId) {
-        window.location.href = `item-details.html?id=${itemId}`;
+        window.location.href = `./Items/item-details.html?id=${itemId}`;
     }
 </script>
-<script src="Scripts/multi-animation.js"></script>
+<script src="./Scripts/multi-animation.js"></script>
+<script src="./Cart/cart.js"></script>
 </body>
 </html>

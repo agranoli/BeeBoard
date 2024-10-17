@@ -1,14 +1,17 @@
 <?php
+require 'vendor/autoload.php';
 
-// Process the payment using Paysera's API
+\Stripe\Stripe::setApiKey('your-secret-key-here');
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $paymentMethod = $_POST['payment_method'];
+    $input = json_decode(file_get_contents('php://input'), true);
+    $amount = $input['amount']; // Amount in cents
 
-    if ($paymentMethod === 'paysera') {
-        // Here you would typically create a payment request to Paysera's API
-        // For demonstration, we'll just redirect to a mock Paysera page
-        header('Location: https://www.paysera.com/pay');
-        exit;
-    }
+    $paymentIntent = \Stripe\PaymentIntent::create([
+        'amount' => $amount,
+        'currency' => 'eur',
+    ]);
+
+    echo json_encode(['clientSecret' => $paymentIntent->client_secret]);
 }
 ?>

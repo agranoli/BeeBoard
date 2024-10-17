@@ -1,19 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Checkout</title>
-</head>
-<body>
-<h1>Checkout</h1>
-<form action="process_payment.php" method="post">
-    <h2>Select Payment Method</h2>
-    <label>
-        <input type="radio" name="payment_method" value="paysera" checked>
-        <img src="paysera_logo.png" alt="Paysera Logo"> Paysera
-    </label><br>
-
-    <input type="submit" value="Proceed to Payment">
+<form id="payment-form">
+    <div id="card-element"><!-- A Stripe Element will be inserted here. --></div>
+    <button type="submit">Submit Payment</button>
+    <div id="card-errors" role="alert"></div>
 </form>
-</body>
-</html>
+
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+    const stripe = Stripe('your-publishable-key-here');
+    const elements = stripe.elements();
+    const card = elements.create('card');
+    card.mount('#card-element');
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const clientSecret = urlParams.get('clientSecret');
+
+    const form = document.getElementById('payment-form');
+    form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const {error, paymentIntent} = await stripe.confirmCardPayment(clientSecret, {
+            payment_method: {
+                card: card,
+            }
+        });
+
+        if (error) {
+            document.getElementById('card-errors').textContent = error.message;
+        } else {
+            alert('Payment successful!');
+            // Optionally, redirect to a success page or clear the cart
+        }
+    });
+</script>
