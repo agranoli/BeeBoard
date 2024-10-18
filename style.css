@@ -284,7 +284,7 @@ body {
 }
 .recommended-h-popular {
     display: flex;
-    width: 50%;
+    margin-right:30px;
     text-align: center;
     justify-content: center;
     margin-top: 100px;
