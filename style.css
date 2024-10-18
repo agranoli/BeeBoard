@@ -31,7 +31,6 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 .header {
     display: flex;
     position: fixed;
@@ -44,25 +43,20 @@ body {
     transition: transform 0.3s ease-in-out;
     z-index: 1000;
 }
-
 .header.hidden {
     transform: translateY(-100%);
 }
-
 .header-logo img {
     height: 100px;
     transition: transform 0.3s ease-in-out;
 }
-
 .header-logo img:hover {
     transform: scale(1.1);
 }
-
 .header-navigation {
     display: flex;
     align-items: center;
 }
-
 .header-button {
     text-decoration: none;
     color: #393D3F;
@@ -71,11 +65,9 @@ body {
     font-weight: 600;
     transition: color 0.3s ease-in-out;
 }
-
 .header-button:hover {
     color: #fff;
 }
-
 .cart {
     height: 35px;
     width: 35px;
@@ -146,6 +138,7 @@ body {
     border-radius: 20px;
     overflow: hidden;
     padding: 20px;
+    flex-direction: row;
 }
 
 .bee-board-cont-orange {
@@ -629,15 +622,16 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height:80%;
+    min-height:80%;
 }
 
 .carousel-inner {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap:wrap;
     width: 100%;
-    height: 70vh;
+    height: 90%;
     margin-bottom:15px;
 }
 
@@ -645,14 +639,14 @@ body {
 .carousel-item-potter,
 .carousel-item-stitch,
 .carousel-item-joy {
-    width: 17%;
+    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin-bottom:20px;
     height: 100%; /* Ensure the parent container has a fixed height */
 }
-
 .new-item-text-elsa {
     background: linear-gradient(90deg, #ffffe8, #f9eecd, #c2fff6, #7debff, #60e7f7);
 }
@@ -719,7 +713,6 @@ body {
     right: 10px;
 }
 
-/* New styles for the redesigned product page */
 .product-container {
     display: flex;
     background-color: #484b4c;
@@ -874,15 +867,66 @@ body {
     color: #dbc771;
     margin-top:10px;
 }
-    @media (max-width: 768px) {
+.flex{
+    display:flex;
+}
+.division{
+    display:flex;
+    width:100%;
+    height:auto;
+    align-items:center;
+    justify-content:space-between;
+    flex-direction: row;
+}
+@media (max-width: 1000px){
+    .header-logo img {
+        height: 70px;
+    }
+    .header-button{
+        font-size:17px;
+        margin: 0 5px;
+        font-weight:400;
+    }
+    .cart {
+        height: 25px;
+        width: 25px;
+        margin-left: 15px;
+    }
+    .bee-board {
+        height: 300px;
+    }
+    .bee-board-cont{
+        flex-direction:column;
+    }
+    .recommended-h-popular {
+        font-size: 58px;
+        margin-top:0px;
+    }
+
+    .recommended-p {
+        font-size: 16px;
+        margin-top:30px;
+    }
+    .product-image{
+        height:350px;
+    }
+    .product-details{
+        width:90%;
+    }
+}
+    @media (max-width: 600px) {
     .product-container {
         flex-direction: column;
     }
-
+        .bee-board-cont{
+            flex-direction:column;
+        }
     .product-image-container {
         height: 300px;
     }
-
+    .division{
+        flex-direction:column
+    }
     .bee-board-cont {
         flex-direction: column;
     }
@@ -899,7 +943,70 @@ body {
         font-size: 28px;
     }
 
+
     .popular-p {
         font-size: 16px;
     }
+        .header-logo img {
+            height: 50px;
+        }
+        .header-button{
+            font-size:15px;
+            margin: 0 5px;
+            font-weight:300;
+        }
+        .cart {
+            height: 15px;
+            width: 15px;
+            margin-left: 15px;
+        }
+        .bee-board-cont{
+            flex-direction:column;
+        }
+        .recommended-p-cont {
+            width:90%;
+        }
+        .recommended-h-cont {
+            height: auto;
+            justify-content:center;
+        }
+        .recommended-h-popular {
+            width: auto;
+            margin-top: 10px;
+            font-size: 50px;
+        }
+        .recommended-p {
+            margin-right: 00px;
+            font-size: 15px;
+            line-height: 1.2;
+        }
+        .recommended-buy {
+            /*flex-direction: row;*/
+            flex: 1 1 90%;
+            align-items:flex-start;
+        }
+        .flex{
+            display:none;
+        }
+        .popular-details{
+            width: 160px;
+            font-size:12px;
+            margin-left:10px;
+        }
+        .new-items{
+            flex-wrap:wrap;
+        }
+        .carousel-item-elsa,
+        .carousel-item-potter,
+        .carousel-item-stitch,
+        .carousel-item-joy {
+            width: 300px;
+            margin-bottom:15px;
+        }
+        .product-image{
+            height: 300px;
+        }
+        .product-details{
+            width:90%;
+        }
 }

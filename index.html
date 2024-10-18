@@ -10,7 +10,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <title>BeeBrand</title>
-    <!-- Preload critical images -->
     <link rel="preload" href="/Images/Photos/elsa.webp" as="image">
 </head>
 <body>
@@ -25,7 +24,7 @@
             <a href="Contacts.html" class="header-button">Kontakti</a>
         </nav>
         <div class="header-end-nav">
-            <a href="./Profile/CreateUser.html"><img src="./Images/SVG/User.SVG" alt="User" class="cart"></a>
+<!--            <a href="./Profile/CreateUser.html"><img src="./Images/SVG/User.SVG" alt="User" class="cart"></a>-->
             <a href="Cart/cart.html"><img src="./Images/SVG/Cart.SVG" alt="Cart" class="cart"></a>
         </div>
     </header>
@@ -39,23 +38,31 @@
                     <p class="recommended-p">Kad jūties emocionāli pārņemts vai sasprindzis, Elza ar savām ledus spējām palīdz "atvēsināt" emocijas, ļaujot tev rast mieru un koncentrēties uz risinājumu. Viņa dod spēku saglabāt vēsu prātu un skaidri saskatīt, kā rīkoties pat sarežģītās situācijās.</p>
                 </div>
             </div>
-            <div class="recommended-cont">
-                <div class="bee-board">
-                    <div class="ios-animation"></div>
-                    <img src="/Images/Photos/elsa.webp" alt="Elza" class="popular-image" loading="lazy">
-                </div>
-            </div>
-            <div class="recommended-buy">
-                <div class="recommended-buy-p-cont">
-                    <div class="video">
-                        video
+            <div class="division">
+                <div class="recommended-cont">
+                    <div class="bee-board">
+                        <div class="ios-animation"></div>
+                        <img src="/Images/Photos/elsa.webp" alt="Elza" class="popular-image" loading="lazy">
                     </div>
-                    <p class="popular-p">Populārārakais BeeBoard Šomēness</p>
                 </div>
-                <div class="recommended-buy-button-cont">
-                    <div class="popular-options">
-                        <a href="#" class="popular-cart" onclick="addToCart('Elza', 29.99, './Images/Photos/elsa.webp')">Pievienot grozam</a>
-                        <a href="Items/item-details.html?id=1" class="popular-details">Skatīt</a>
+                <div class="recommended-buy">
+                    <div class="recommended-buy-p-cont">
+                        <div class="video" style="margin-top:10px;">
+                            <iframe width="100%" height="100%"
+                                    src="https://www.youtube.com/embed/4Sa9L4DHXv8"
+                                    title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                        <p class="popular-p flex">Populārārakais BeeBoard Šomēness</p>
+                    </div>
+                    <div class="recommended-buy-button-cont">
+                        <div class="popular-options">
+                            <a href="#" class="popular-cart" onclick="addToCart('Elza', 29.99, './Images/Photos/elsa.webp')">Pievienot grozam</a>
+                            <a href="Items/item-details.html?id=1" class="popular-details">Skatīt</a>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -84,6 +84,7 @@ h1 {
     gap: 20px;
     justify-content: center;
     width: 100%;
+    flex-direction:row;
 }
 
 table {
@@ -122,7 +123,6 @@ th {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 .summary-item {
     display: flex;
     justify-content: space-between;
@@ -135,24 +135,24 @@ th {
     margin-top: 20px;
 }
 
-.gift-code {
-    display: flex;
-    margin-bottom: 20px;
-}
+/*.gift-code {*/
+/*    display: flex;*/
+/*    margin-bottom: 20px;*/
+/*}*/
 
-.gift-code input {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ddd;
-}
+/*.gift-code input {*/
+/*    flex: 1;*/
+/*    padding: 10px;*/
+/*    border: 1px solid #ddd;*/
+/*}*/
 
-.gift-code button {
-    background-color: #dbc771;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-}
+/*.gift-code button {*/
+/*    background-color: #dbc771;*/
+/*    color: white;*/
+/*    border: none;*/
+/*    padding: 10px 15px;*/
+/*    cursor: pointer;*/
+/*}*/
 
 .checkout-btn {
     width: 100%;
@@ -208,4 +208,214 @@ th {
 .remove-button:hover {
     background-color: #e04343;
     transform: scale(1.1);
+}
+@media (max-width: 1000px) {
+    .cart {
+        height: 25px;
+        width: 25px;
+        margin-left: 15px;
+    }
+
+    .header-logo img {
+        height: 70px;
+    }
+
+    .header-button {
+        font-size: 17px;
+        margin: 0 5px;
+        font-weight: 400;
+    }
+
+    .bee-board {
+        height: 300px;
+    }
+
+    .bee-board-cont {
+        flex-direction: column;
+    }
+
+    .recommended-h-popular {
+        font-size: 58px;
+        margin-top: 0px;
+    }
+
+    .recommended-p {
+        font-size: 16px;
+        margin-top: 30px;
+    }
+}
+.flex{
+    display:flex;
+}
+
+@media (max-width: 700px) {
+    .cart {
+        height: 20px;
+        width: 20px;
+        margin-left: 10px;
+    }
+    .quantity-button{
+        width:20px;
+        height:20px;
+    }
+    .remove-button{
+        width:20px;
+        height:20px;
+    }
+    .flex{
+        display:none;
+    }
+    .summary{
+        width:200px;
+    }
+    th, td{
+        padding:5px;
+    }
+    .total{
+        font-size:13px;
+    }
+    .cart-container{
+        flex-direction: column;
+    }
+    .header-logo img {
+        height: 50px;
+    }
+
+    .header-button {
+        font-size: 15px;
+        margin: 0 5px;
+        font-weight: 300;
+    }
+
+    .bee-board {
+        height: 250px;
+    }
+
+    .bee-board-cont {
+        flex-direction: column;
+    }
+
+    .recommended-h-popular {
+        font-size: 50px;
+        margin-top: 10px;
+    }
+
+    .recommended-p {
+        font-size: 15px;
+        margin-top: 20px;
+    }
+
+    .product-container {
+        flex-direction: column;
+    }
+
+    .product-image-container {
+        height: 300px;
+    }
+
+    .product-details {
+        width: 90%;
+    }
+
+    .popular-details {
+        width: 160px;
+        font-size: 12px;
+        margin-left: 10px;
+    }
+
+    .new-items {
+        flex-wrap: wrap;
+    }
+
+    .carousel-item-elsa,
+    .carousel-item-potter,
+    .carousel-item-stitch,
+    .carousel-item-joy {
+        width: 300px;
+        margin-bottom: 15px;
+    }
+
+    .product-image {
+        height: 300px;
+    }
+}
+@media (max-width: 700px) {
+    /* Assuming "kopsumma" is the one before the last column of the table */
+    td:nth-last-child(2), th:nth-last-child(2) {
+        display: none;
+    }
+}
+@media (max-width: 320px) {
+    .cart {
+        height: 15px;
+        width: 15px;
+        margin-left: 5px;
+    }
+    .flex{
+        display:none;
+    }
+    .header-logo img {
+        height: 40px;
+    }
+
+    .header-button {
+        font-size: 14px;
+        margin: 0 3px;
+        font-weight: 300;
+    }
+
+    .bee-board {
+        height: 200px;
+    }
+
+    .bee-board-cont {
+        flex-direction: column;
+    }
+
+    .recommended-h-popular {
+        font-size: 45px;
+        margin-top: 5px;
+    }
+
+    .recommended-p {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .product-container {
+        flex-direction: column;
+    }
+
+    .product-image-container {
+        height: 250px;
+    }
+
+    .product-details {
+        width: 85%;
+    }
+
+    .popular-details {
+        width: 140px;
+        font-size: 11px;
+        margin-left: 5px;
+    }
+
+    .new-items {
+        flex-wrap: wrap;
+    }
+
+    .carousel-item-elsa,
+    .carousel-item-potter,
+    .carousel-item-stitch,
+    .carousel-item-joy {
+        width: 280px;
+        margin-bottom: 10px;
+    }
+
+    .product-image {
+        height: 250px;
+    }
+    .cart-container{
+        flex-direction: column;
+    }
 }
